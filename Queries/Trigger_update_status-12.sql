@@ -7,9 +7,8 @@ CREATE TABLE AuditLog(
 )
 
 
-DROP TRIGGER IF EXISTS t_Update_Book_Status
-GO
-CREATE TRIGGER t_Update_Book_Status 
+
+CREATE OR ALTER TRIGGER t_Update_Book_Status 
 ON Books
 AFTER UPDATE
 NOT FOR REPLICATION

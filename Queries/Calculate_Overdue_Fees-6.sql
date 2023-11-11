@@ -11,7 +11,9 @@ BEGIN
 	FROM Loans
 	WHERE LoanID = @LoanId
 	
-	IF(@Days <= 30 AND @Days > 0) SET @TotalFees = @Days;
-	IF(@Days > 30) SET @TotalFees = @Days * 2;
+	IF(@Days <= 30 AND @Days > 0) 
+		SET @TotalFees = @Days;
+	ELSE IF(@Days > 30) 
+		SET @TotalFees = @Days * 2;
 	RETURN @TotalFees
 END;

@@ -1,7 +1,6 @@
 
-DROP PROCEDURE IF EXISTS sp_AddNewBorrower
-GO
-CREATE PROCEDURE sp_AddNewBorrower(
+
+CREATE OR ALTER PROCEDURE sp_AddNewBorrower(
 	@FirstName varchar(10), 
 	@LastName varchar(10), 
 	@Email varchar(220), 
